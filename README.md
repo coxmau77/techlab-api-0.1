@@ -1035,4 +1035,4 @@ Para dudas o problemas:
 
 **Versión del Documento:** 2.0  
 **Última Actualización:** Noviembre 2025  
-**Autor:** TechLab Team
+**Autor:** Mauricio Cox - TechLab Team

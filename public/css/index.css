@@ -1,0 +1,138 @@
+/* =============================================================================
+   ESTILOS ESPECÍFICOS - Página de Autenticación (index.html)
+   Nota: Estilos globales reutilizables están en globals.css
+   ============================================================================= */
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.user-section {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.user-info {
+    display: none;
+}
+
+.user-info.active {
+    display: block;
+}
+
+.user-info p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.user-info .label {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.not-logged {
+    color: #999;
+    font-size: 14px;
+}
+
+.not-logged.hidden {
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input {
+    padding: 12px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.form-toggle {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.form-toggle p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.toggle-link {
+    color: #667eea;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.toggle-link:hover {
+    color: #5568d3;
+}
+
+.hidden-form {
+    display: none;
+}
+
+.hidden-form.active {
+    display: block;
+}
+
+.user-actions {
+    display: none;
+    gap: 10px;
+}
+
+.user-actions.active {
+    display: flex;
+}
+
+.message {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+}

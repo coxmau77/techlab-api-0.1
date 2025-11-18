@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - TechLab</title>
+    <link rel="stylesheet" href="/css/globals.css">
+    <link rel="stylesheet" href="/css/products.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>TechLab - Productos</h1>
+        <div class="navbar-right">
+            <span class="user-email" id="userEmail"></span>
+            <button class="btn-logout" onclick="handleLogout()">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Gestionar Productos</h2>
+
+        <div id="message" class="message"></div>
+
+        <div class="form-section">
+            <h3 style="margin-bottom: 20px; color: #333;">Nuevo Producto</h3>
+            <form id="productForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nombre *</label>
+                        <input type="text" id="name" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Precio *</label>
+                        <input type="number" id="price" step="0.01" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">Stock</label>
+                        <input type="number" id="stock" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" rows="4" autocomplete="off"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Agregar Producto</button>
+                    <button type="reset" class="btn-reset">Limpiar</button>
+                </div>
+            </form>
+        </div>
+
+        <h3 class="section-title">Productos Registrados</h3>
+        <div id="loading" class="loading">Cargando productos...</div>
+        <div id="productsList" class="products-grid"></div>
+    </div>
+
+    <!-- Modal de Edición -->
+    <dialog id="editModal">
+        <div style="padding: 30px;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px;">
+                <h2 style="margin: 0; color: #333;">Editar Producto</h2>
+                <button onclick="closeEditModal()"
+                    style="background: none; border: none; font-size: 28px; cursor: pointer; color: #666; padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">&times;</button>
+            </div>
+            <form id="editForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="editName">Nombre *</label>
+                        <input type="text" id="editName" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPrice">Precio *</label>
+                        <input type="number" id="editPrice" step="0.01" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editStock">Stock</label>
+                        <input type="number" id="editStock" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="editDescription">Descripción</label>
+                    <textarea id="editDescription" rows="4" autocomplete="off"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Guardar Cambios</button>
+                    <button type="button" class="btn-reset" onclick="closeEditModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="/js/session.js"></script>
+    <script src="/js/products.js"></script>
+</body>
+
+</html>

@@ -4,27 +4,30 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 
 // Importar rutas
-import productsRoutes from "./routes/products.routes.js";
-import authRoutes from "./routes/auth.routes.js";
+import productsRoutes from "./src/routes/products.routes.js";
+import authRoutes from "./src/routes/auth.routes.js";
 
 // Cargar variables de entorno
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 // Middlewares globales
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Servir archivos estáticos desde el directorio public
+app.use(express.static("public"));
+
 // Rutas
 app.use("/api/products", productsRoutes);
 app.use("/auth", authRoutes);
 
-// Ruta de prueba
+// Ruta raíz - redireccionar a index.html
 app.get("/", (req, res) => {
-  res.json({ message: "API TechLab funcionando correctamente" });
+  res.sendFile(new URL("./public/index.html", import.meta.url).pathname);
 });
 
 // Manejo de rutas no encontradas (404)
@@ -42,4 +45,3 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
-
