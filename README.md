@@ -2,8 +2,6 @@
 
 API REST para la gestión de productos, desarrollada con Node.js, Express, Firebase (Firestore) y autenticación mediante JSON Web Tokens (JWT).
 
----
-
 ## Tabla de Contenidos
 
 1. [Características Principales](#características-principales)
@@ -16,8 +14,6 @@ API REST para la gestión de productos, desarrollada con Node.js, Express, Fireb
 8. [Estructura del Proyecto](#estructura-del-proyecto)
 9. [Tecnologías Utilizadas](#tecnologías-utilizadas)
 10. [Solución de Problemas Comunes](#solución-de-problemas-comunes)
-
----
 
 ## Características Principales
 
@@ -32,15 +28,11 @@ API REST para la gestión de productos, desarrollada con Node.js, Express, Fireb
 - Registros con timestamps automáticos (`createdAt`, `updatedAt`).
 - Manejo consistente de errores y códigos HTTP estándar.
 
----
-
 ## Requisitos Previos
 
 - Node.js v14 o superior
 - npm o yarn
 - Cuenta en Firebase: [https://console.firebase.google.com/](https://console.firebase.google.com/)
-
----
 
 ## Instalación y Configuración
 
@@ -88,8 +80,6 @@ Recomendaciones:
 
 En Firestore, crear la colección `products` si deseas iniciarla manualmente.
 
----
-
 ## Ejecutar el Proyecto
 
 ```bash
@@ -102,8 +92,6 @@ Si la configuración es correcta, deberías ver:
 Firebase conectado correctamente
 Servidor corriendo en http://localhost:8080
 ```
-
----
 
 ## Estructura de Respuestas y Validaciones
 
@@ -147,15 +135,11 @@ Servidor corriendo en http://localhost:8080
 - Autenticación en rutas protegidas.
 - Nunca se retorna información sensible.
 
----
-
 ## Endpoints de la API
 
 A continuación se presenta un resumen claro de cada endpoint con validaciones incluidas.
 
 ### Autenticación
-
----
 
 ### POST /auth/register
 
@@ -173,8 +157,6 @@ Body:
 
 Retorna token y datos del usuario.
 
----
-
 ### POST /auth/login
 
 Autentica usuario y devuelve token válido durante 24 horas.
@@ -188,23 +170,15 @@ Body:
 }
 ```
 
----
-
 ## Productos
-
----
 
 ### GET /api/products
 
 Público. Devuelve todos los productos.
 
----
-
 ### GET /api/products/:id
 
 Público. Devuelve un producto por ID.
-
----
 
 ### POST /api/products/create
 
@@ -227,8 +201,6 @@ Body:
 }
 ```
 
----
-
 ### PUT /api/products/:id
 
 Protegido. Actualiza un producto existente.
@@ -242,13 +214,9 @@ Body opcional:
 }
 ```
 
----
-
 ### DELETE /api/products/:id
 
 Protegido. Elimina un producto.
-
----
 
 ## Guía de Pruebas con Postman
 
@@ -259,8 +227,6 @@ Incluye:
 - Loguearse y guardar token.
 - Probar endpoints protegidos.
 - Probar flujos de error (token expirado, datos inválidos, etc.).
-
----
 
 ## Estructura del Proyecto
 
@@ -279,8 +245,6 @@ src/
 │── server.js
 ```
 
----
-
 ## Tecnologías Utilizadas
 
 - Node.js
@@ -289,8 +253,6 @@ src/
 - JSON Web Tokens
 - bcryptjs
 - Dotenv
-
----
 
 ## Solución de Problemas Comunes
 
