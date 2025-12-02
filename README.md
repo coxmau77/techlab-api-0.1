@@ -2,7 +2,7 @@
 
 API REST completa para la gestión de productos, implementada con Node.js, Express, Firebase (Firestore) y autenticación segura mediante JSON Web Tokens (JWT).
 
-## � Tabla de Contenidos
+##  Tabla de Contenidos
 
 1. [Características Principales](#-características-principales)
 2. [Requisitos Previos](#-requisitos-previos)
@@ -128,7 +128,7 @@ Si todo está correcto, deberías ver en tu consola:
 
 ---
 
-## � Estructura de Respuestas y Validaciones
+##  Estructura de Respuestas y Validaciones
 
 ### Estructura Estándar de Respuestas
 
