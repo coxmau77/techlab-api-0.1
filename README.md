@@ -178,7 +178,7 @@ La API utiliza los siguientes códigos HTTP estándar:
 
 ---
 
-## �📚 Endpoints de la API
+## 📚 Endpoints de la API
 
 ### Autenticación
 
